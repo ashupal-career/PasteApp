@@ -40,7 +40,9 @@ const Paste = () => {
                     </div>
                     <div className='flex flex-row gap-4 palce-content-evenly'>
                       <button>Edit</button>
-                      <button>View</button>
+                      <button>
+                        <a href={`/pastes/${paste?._id}`}>View</a>
+                      </button>
                       <button onClick={() => handleDelete(paste?._id)}>Delete</button>
                       <button onClick={() => {navigator.clipboard.writeText(paste?.content), toast.success("copied to clipboard")}}>Copy</button>
                       <button>Share</button>
